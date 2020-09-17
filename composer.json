@@ -1,23 +1,38 @@
 {
-  "name": "renolit/static-info-tables-tr",
+  "name": "leuchtfeuer/static-info-tables-bg",
   "description": "Turkish (tr) language pack for the Static Info Tables providing localized names for countries.",
   "type": "typo3-cms-extension",
   "license": "GPL-2.0-or-later",
+  "homepage": "https://www.Leuchtfeuer.com",
   "authors": [
     {
-      "name": "Ephraim Härer",
+      "name": "Florian Wessels",
       "role": "Developer",
-      "email": "ephraim.haerer@renolit.com",
-      "homepage": "https://www.renolit.com"
+      "email": "f.wessels@Leuchtfeuer.com",
+      "homepage": "https://www.Leuchtfeuer.com"
     }
   ],
+  "support": {
+    "issues": "https://github.com/Leuchtfeuer/static-info-tables-tr/issues",
+    "source": "https://github.com/Leuchtfeuer/static-info-tables-tr",
+    "email": "dev@Leuchtfeuer.com"
+  },
   "replace": {
-    "static_info_tables_tr": "self.version",
     "typo3-ter/static-info-tables-tr": "self.version"
   },
   "require": {
-    "php": "^7.0",
-    "typo3/cms-core": "^8.7 || ^9.5",
-    "sjbr/static-info-tables": "^6.7"
+    "typo3/cms-core": "^9.5.17 || ^10.4.2",
+    "typo3/cms-extbase": "^9.5.17 || ^10.4.2",
+    "sjbr/static-info-tables": "^6.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "Leuchtfeuer\\StaticInfoTablesTr\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "static_info_tables_tr"
+    }
   }
 }

@@ -9,12 +9,9 @@ declare(strict_types=1);
  * Florian Wessels <f.wessels@Leuchtfeuer.com>, Leuchtfeuer Digital Marketing
  */
 
-defined('TYPO3_MODE') || die;
+namespace Leuchtfeuer\StaticInfoTablesTr;
 
-call_user_func(
-    function ($additionalFields, $dataSetName) {
-        \Leuchtfeuer\StaticInfoTablesTr\Provider\TcaProvider::generateAndRegisterTca($additionalFields, $dataSetName);
-    },
-    ['cn_short_en' => 'cn_short_tr'],
-    'static_countries'
-);
+final class Extension
+{
+    const EXTENSION_KEY = 'static_info_tables_tr';
+}

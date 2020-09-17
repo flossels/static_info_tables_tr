@@ -1,30 +1,29 @@
 <?php
 
-/***************************************************************
- * Extension Manager/Repository config file for ext "static_info_tables_tr".
- * Manual updates:
- * Only the data in the array - everything else is removed by next
- * writing. "version" and "dependencies" must not be touched!
- ***************************************************************/
-
-$EM_CONF[$_EXTKEY] = [
+$EM_CONF['static_info_tables_tr'] = [
     'title' => 'Static Info Tables (tr)',
     'description' => 'Turkish (tr) language pack for the Static Info Tables providing localized names for countries.',
     'category' => 'misc',
-    'version' => '6.8.1',
+    'version' => '6.9.0',
     'state' => 'stable',
     'uploadfolder' => false,
     'createDirs' => '',
     'clearcacheonload' => false,
-    'author' => 'Ephraim Härer',
-    'author_email' => 'ephraim.haerer@renolit.com',
-    'author_company' => 'RENOLIT SE',
+    'author' => 'Florian Wessels',
+    'author_email' => 'dev@Leuchtfeuer.com',
+    'author_company' => 'Leuchtfeuer Digital Marketing',
     'constraints' => [
         'depends' => [
-            'typo3' => '8.7.0-9.5.99',
-            'static_info_tables' => '6.7.3-6.7.99',
+            'typo3' => '9.5.0-10.4.99',
+            'php' => '7.2.0-7.4.99',
+            'static_info_tables' => '6.9.0-6.99.99',
         ],
         'conflicts' => [],
         'suggests' => [],
+    ],
+    'autoload' => [
+        'psr-4' => [
+            'Leuchtfeuer\\StaticInfoTablesTr\\' => 'Classes',
+        ],
     ],
 ];
